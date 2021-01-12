@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 .App {
   text-align: center;
 }
@@ -70,3 +70,27 @@
 }
 
 /*  Navbar Ends */
+
+/* Index starts */
+.welcomer {
+  height: 100vh;
+  width: 100%;
+}
+.welcomer .welcomer-span {
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  color: #07e701;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 74px;
+  letter-spacing: 5px;
+  font-family: 'VT323', monospace;
+}
+.welcomer .welcomer-img {
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+}
+/* Index ends */
