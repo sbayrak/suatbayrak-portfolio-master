@@ -1,21 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import 'react-tiger-transition/styles/main.min.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/layout/Navbar';
+import { Navigation, Route } from 'react-tiger-transition';
 import Home from './components/pages/Home';
 import Index from './components/layout/Index';
-import { Link, glide, Navigation } from 'react-tiger-transition';
+import Navbar from './components/layout/Navbar';
 
-function App() {
-  return (
-    <Router>
-      <Navigation>
-        <Route exact path='/' component={Index}></Route>
-        <Route exact path='/home' component={Home}></Route>
-      </Navigation>
-    </Router>
-  );
-}
+document.getElementById('root').style.height = '100vh';
 
-export default App;
+export default () => (
+  <Router>
+    <Navigation>
+      <Route exact path='/home'>
+        <Home></Home>
+      </Route>
+      <Route exact path='/'>
+        <Index></Index>
+      </Route>
+    </Navigation>
+  </Router>
+);

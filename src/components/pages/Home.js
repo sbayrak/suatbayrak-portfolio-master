@@ -1,15 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import '../../App.css';
+import Navbar from '../layout/Navbar';
+import { Screen, Link, glide } from 'react-tiger-transition';
 const Home = () => {
-  return (
-    <div>
-      <h1>hi</h1>
+  glide({
+    name: 'glide-right',
+    direction: 'right',
+  });
+  console.log(window.location.pathname);
 
-      <Link to='/'>Index</Link>
-      {/* https://codesandbox.io/s/basic-react-page-transition-demo-rk0uv?file=/src/index.js 
-      https://github.com/Steveeeie/react-page-transition
-      
-      */}
+  return (
+    <div className='home'>
+      <Navbar></Navbar>
+      <Link to='/' transition='glide-right'>
+        Index
+      </Link>
     </div>
   );
 };
