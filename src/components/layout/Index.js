@@ -1,28 +1,64 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import matrix from './matrix.gif';
+import bgvid from './bgvid.mp4';
+import sbayrak from './sbayrak.jpg';
 import { Link, glide, Redirect } from 'react-tiger-transition';
 import '../../App.css';
+import Navbar from './Navbar';
 
 const Index = () => {
   const history = useHistory();
 
-  setTimeout(() => {
-    history.push('/home');
-  }, 6000);
   glide({
     name: 'glide-left',
     direction: 'left',
   });
   return (
     <div className='welcomer'>
+      <Navbar></Navbar>
       <Link
         className='welcomer-span2'
-        to='/home'
+        to='/about'
         transition='glide-left'
       ></Link>
-      <span className='welcomer-span'>Wake up, Neo.</span>
-      <img className='welcomer-img' src={matrix} alt='matrix...' />
+      <img src={sbayrak}></img>
+      <span className='welcomer-span'>Hi, Im Suat Bayrak</span>
+
+      <div className='mid'>
+        <span>Full stack web developer</span>
+        <ul>
+          <li>MongoDB</li>
+          <li>Express</li>
+          <li>React</li>
+          <li>NodeJS</li>
+        </ul>
+      </div>
+      <div className='bottom'>
+        <ul>
+          <li>
+            <a href='https://github.com/sbayrak' target='_blank'>
+              <i class='fab fa-instagram'> </i>
+            </a>{' '}
+          </li>
+          <li>
+            <a href='https://github.com/sbayrak' target='_blank'>
+              <i class='fab fa-github'> </i>
+            </a>{' '}
+          </li>
+          <li>
+            <a href='https://github.com/sbayrak' target='_blank'>
+              <i class='fab fa-linkedin'> </i>
+            </a>{' '}
+          </li>
+        </ul>
+        <Link to='/contact' transition='glide-left' id='contact'>
+          Contact
+        </Link>
+      </div>
+      <video autoPlay muted loop>
+        <source src={bgvid} type='video/mp4' />{' '}
+      </video>
     </div>
   );
 };

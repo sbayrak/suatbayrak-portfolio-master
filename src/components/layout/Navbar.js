@@ -7,28 +7,47 @@ const Navbar = () => {
     name: 'glide-left',
     direction: 'left',
   });
+  glide({
+    name: 'glide-right',
+    direction: 'right',
+  });
   return (
     <div className='navbar'>
       <div className='links'>
-        <div id='setup'></div>
         <ul>
           <li>
-            <Link to='/home' transition='glide-left' className='active'>
+            <Link
+              to='/'
+              transition='glide-right'
+              className={window.location.pathname === '/' && 'active'}
+            >
               Home
             </Link>{' '}
           </li>
           <li>
-            <Link to='/about' transition='glide-left'>
+            <Link
+              to='/about'
+              transition='glide-left'
+              className={window.location.pathname === '/about' && 'active'}
+            >
               About
             </Link>{' '}
           </li>
           <li>
-            <Link to='/portfolio' transition='glide-left'>
+            <Link
+              to='/portfolio'
+              transition='glide-left'
+              className={window.location.pathname === '/portfolio' && 'active'}
+            >
               Porfolio
             </Link>{' '}
           </li>
           <li>
-            <Link to='/contact' transition='glide-left'>
+            <Link
+              to='/contact'
+              transition='glide-left'
+              className={window.location.pathname === '/contact' && 'active'}
+            >
               Contact
             </Link>{' '}
           </li>
