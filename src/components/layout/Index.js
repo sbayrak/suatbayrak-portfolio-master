@@ -1,15 +1,11 @@
-import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import matrix from './matrix.gif';
+import React from 'react';
 import bgvid from './bgvid.mp4';
 import sbayrak from './sbayrak.jpg';
-import { Link, glide, Redirect } from 'react-tiger-transition';
+import { Link, glide } from 'react-tiger-transition';
 import '../../App.css';
 import Navbar from './Navbar';
 
 const Index = () => {
-  const history = useHistory();
-
   glide({
     name: 'glide-left',
     direction: 'left',

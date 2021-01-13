@@ -8,7 +8,7 @@ import About from './components/pages/About';
 
 document.getElementById('root').style.height = '100vh';
 
-export default () => (
+const App = () => (
   <Router>
     <Navigation>
       <Route exact path='/about'>
@@ -20,3 +20,5 @@ export default () => (
     </Navigation>
   </Router>
 );
+
+export default App;
