@@ -56,6 +56,9 @@ const Index = () => {
           Contact
         </Link>
       </div>
+      <span style={{ position: 'absolute', bottom: 0, color: '#03a062' }}>
+        Wake up, Neo.
+      </span>
       <video autoPlay muted loop>
         <source src={bgvid} type='video/mp4' />{' '}
       </video>
