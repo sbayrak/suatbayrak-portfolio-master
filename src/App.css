@@ -261,14 +261,12 @@
 .portfolio-wrapper {
   position: relative;
   top: 15%;
-  height: 100vh;
   width: calc(100% - 400px);
   margin-left: 200px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 20px;
-  grid-row-gap: 20px;
   padding: 0 5%;
 }
 .portfolio-wrapper .card {
@@ -282,13 +280,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
+  padding: 10px 0;
 }
 .portfolio-wrapper .card .card-title {
   text-align: center;
   color: #191919;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .portfolio-wrapper .card .card-title a {
   color: #191919;
@@ -304,7 +302,7 @@
 .portfolio-wrapper .card .card-links {
   padding: 10px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-around;
 }
