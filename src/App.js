@@ -5,6 +5,7 @@ import { Navigation, Route } from 'react-tiger-transition';
 import Index from './components/layout/Index';
 import Navbar from './components/layout/Navbar';
 import About from './components/pages/About';
+import Portfolio from './components/pages/Portfolio';
 
 document.getElementById('root').style.height = '100vh';
 
@@ -13,6 +14,9 @@ const App = () => (
     <Navigation>
       <Route exact path='/about'>
         <About></About>
+      </Route>
+      <Route exact path='/portfolio'>
+        <Portfolio></Portfolio>
       </Route>
       <Route exact path='/'>
         <Index></Index>

@@ -14,7 +14,7 @@
 
 .navbar {
   width: 100%;
-  position: absolute;
+  position: fixed;
   margin-top: 20px;
   background-color: transparent;
   height: 60px;
@@ -60,6 +60,7 @@
 /* Index starts */
 .welcomer {
   height: 100vh;
+  background-color: #191919;
   width: 100%;
 }
 .welcomer .welcomer-span {
@@ -194,3 +195,133 @@
 /* Home starts */
 
 /* Home ends */
+
+/* About Starts */
+.about {
+  background-color: #191919;
+}
+.about .about-wrapper .about-right {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+.about .about-wrapper .about-right h1 {
+  color: #fff;
+  font-size: 84px;
+  font-weight: 400;
+  letter-spacing: 7px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(207, 207, 207, 0.5);
+}
+
+.about .about-wrapper .about-right .intro {
+  color: rgb(190, 190, 190);
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about .about-wrapper .about-right .skills {
+  margin-top: 25px;
+  border-bottom: 1px solid rgba(207, 207, 207, 0.5);
+}
+.about .about-wrapper .about-right .skills span {
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  border-bottom: 1px solid rgba(207, 207, 207, 0.5);
+}
+.about .about-wrapper .about-right .skills ul {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  margin-top: 15px;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.about .about-wrapper .about-right .skills ul li {
+  margin-bottom: 10px;
+  color: rgb(190, 190, 190);
+  font-size: 20px;
+}
+.about .about-wrapper .about-right .skills ul li span {
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+}
+
+/* About Ends */
+
+/* Portfolio starts */
+
+.portfolio {
+  background: #191919;
+  height: 100vh;
+  position: relative;
+}
+.portfolio-wrapper {
+  position: relative;
+  top: 15%;
+  height: 100vh;
+  width: calc(100% - 400px);
+  margin-left: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 0 5%;
+}
+.portfolio-wrapper .card {
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #e3e3e3;
+  position: relative;
+  top: 5%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+.portfolio-wrapper .card .card-title {
+  text-align: center;
+  color: #191919;
+  padding: 10px;
+  margin-top: 20px;
+}
+.portfolio-wrapper .card .card-title a {
+  color: #191919;
+  border: none;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.portfolio-wrapper .card .card-box {
+  text-align: center;
+  padding: 10px;
+}
+.portfolio-wrapper .card .card-links {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.portfolio-wrapper .card .card-links a {
+  color: #191919;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 18px;
+  border: 1px solid black;
+  width: 20%;
+  text-align: center;
+  padding: 2% 2%;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+.portfolio-wrapper .card .card-links a:hover {
+  background-color: #191919;
+  color: #fff;
+}
+/* Portfolio ends */

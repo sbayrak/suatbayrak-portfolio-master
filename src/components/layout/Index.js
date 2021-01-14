@@ -4,6 +4,7 @@ import sbayrak from './sbayrak.jpg';
 import { Link, glide } from 'react-tiger-transition';
 import '../../App.css';
 import Navbar from './Navbar';
+import Typical from 'react-typical';
 
 const Index = () => {
   glide({
@@ -19,10 +20,30 @@ const Index = () => {
         transition='glide-left'
       ></Link>
       <img src={sbayrak}></img>
-      <span className='welcomer-span'>Hi, Im Suat Bayrak</span>
+      <span className='welcomer-span'>Hi, I'm Suat Bayrak</span>
 
       <div className='mid'>
-        <span>Full stack web developer</span>
+        <span>
+          {' '}
+          I'm a{' '}
+          <Typical
+            loop={Infinity}
+            wrapper='n'
+            steps={[
+              'Full stack',
+              1000,
+              'React',
+              1000,
+              'NodeJS',
+              1000,
+              'Front-end',
+              1000,
+              'Back-end',
+              1000,
+            ]}
+          ></Typical>
+          developer
+        </span>
         <ul>
           <li>MongoDB</li>
           <li>Express</li>
