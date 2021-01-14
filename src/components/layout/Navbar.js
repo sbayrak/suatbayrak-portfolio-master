@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import { Link, glide, Redirect } from 'react-tiger-transition';
+import { Link, glide } from 'react-tiger-transition';
 
 const Navbar = () => {
   glide({

@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import Navbar from '../layout/Navbar';
-import sbayrak from '../layout/sbayrak.png';
 
 const Portfolio = () => {
   return (

@@ -19,7 +19,7 @@ const Index = () => {
         to='/about'
         transition='glide-left'
       ></Link>
-      <img src={sbayrak}></img>
+      <img src={sbayrak} alt='loading....'></img>
       <span className='welcomer-span'>Hi, I'm Suat Bayrak</span>
 
       <div className='mid'>
@@ -54,17 +54,29 @@ const Index = () => {
       <div className='bottom'>
         <ul>
           <li>
-            <a href='https://github.com/sbayrak' target='_blank'>
+            <a
+              href='https://github.com/sbayrak'
+              target='_blank'
+              rel='noreferrer'
+            >
               <i class='fab fa-instagram'> </i>
             </a>{' '}
           </li>
           <li>
-            <a href='https://github.com/sbayrak' target='_blank'>
+            <a
+              href='https://github.com/sbayrak'
+              target='_blank'
+              rel='noreferrer'
+            >
               <i class='fab fa-github'> </i>
             </a>{' '}
           </li>
           <li>
-            <a href='https://github.com/sbayrak' target='_blank'>
+            <a
+              href='https://github.com/sbayrak'
+              target='_blank'
+              rel='noreferrer'
+            >
               <i class='fab fa-linkedin'> </i>
             </a>{' '}
           </li>
