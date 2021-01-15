@@ -199,9 +199,23 @@
 /* About Starts */
 .about {
   background-color: #191919;
+  background-image: url('./components/layout/8bitcity.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.about .about-wrapper {
+  background-image: url('./components/layout/8bitcity.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.about .about-wrapper .about-left {
+  background-color: rgba(0, 0, 0, 0.85);
 }
 .about .about-wrapper .about-right {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(0, 0, 0, 0.85);
   font-weight: 400;
 }
 .about .about-wrapper .about-right h1 {
@@ -345,3 +359,88 @@
   color: #fff;
 }
 /* Portfolio ends */
+
+/* Contact starts */
+
+.contact {
+  background-image: url('./components/layout/8bitbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contact .contact-wrapper {
+  width: 50%;
+  height: 60vh;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding-top: 2%;
+}
+.contact .contact-wrapper .title {
+  text-align: center;
+}
+.contact .contact-wrapper .title span {
+  color: rgb(255, 255, 255);
+  font-size: 54px;
+}
+.contact .contact-wrapper .contact-form {
+  margin-top: 10px;
+  height: 80%;
+}
+.contact .contact-wrapper .contact-form form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: calc(100% - 100px);
+  margin-left: 50px;
+  position: relative;
+  top: 7%;
+}
+
+.contact .contact-wrapper .contact-form form input {
+  font-size: 20px;
+  padding-left: 10px;
+  width: 100%;
+  margin: 20px 0;
+  height: 50px;
+}
+.contact .contact-wrapper .contact-form form textarea {
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 18px;
+  width: 100%;
+  height: 75px;
+  margin: 20px 0;
+  resize: none;
+}
+.contact .contact-wrapper .contact-form form button {
+  border: 1px solid black;
+  font-size: 20px;
+  width: 20%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -40%;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 500;
+  float: left;
+  transition: ease-in-out 0.7s;
+}
+.contact .contact-wrapper .contact-form form button:hover {
+  background-color: rgb(34, 34, 34);
+  border: 1px solid white;
+  color: rgb(255, 255, 255);
+}
+/* Contact ends */
