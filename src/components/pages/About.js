@@ -1,8 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Navbar from '../layout/Navbar';
 import sbayrak from '../layout/sbayrak.png';
 
 const About = () => {
+  const [skills, setSkills] = useState(true);
+  const [educations, setEducations] = useState(false);
+  const [certificates, setCertificates] = useState(false);
+  const [languages, setLanguages] = useState(false);
   const StyleAbout = {
     backgroundColor: '#191919',
     height: '100vh',
@@ -10,18 +14,86 @@ const About = () => {
     marginLeft: '100px',
     display: 'flex',
     position: 'relative',
-    paddingTop: '7%',
+    paddingTop: '4%',
   };
 
   const StyleAboutLeft = {
     width: '40%',
-    padding: '0 7%',
+    padding: '0 9%',
   };
 
   const StyleAboutRight = {
     width: '60%',
-    padding: '3% 10%',
+    padding: '3% 5%',
   };
+
+  const skill = (
+    <ul>
+      <li>
+        <span>Front-end :</span> ReactJS, Redux, HTML, CSS, JS{' '}
+      </li>
+      <li>
+        <span>Back-end : </span>NodeJS, Express, JS, NoSQL, MongoDB, RESTAPI
+      </li>
+    </ul>
+  );
+  const education = (
+    <ul>
+      <li>
+        <span>Istanbul Bilgi University , </span> Computer Engineering B.Sc.
+        (English)
+      </li>
+    </ul>
+  );
+  const certificate = (
+    <ul>
+      <li>
+        <span>Udemy , </span> React Front-to-Back
+      </li>
+      <li>
+        <span>Udemy , </span> MERN Stack Front To Back: Full Stack React, Redux
+        , Node.js
+      </li>
+      <li>
+        <span>IELTS , </span> Overall 6.5
+      </li>
+    </ul>
+  );
+  const language = (
+    <ul>
+      <li>
+        <span>English , Serbian , Turkish</span>
+      </li>
+    </ul>
+  );
+  function showSection(a) {
+    if (a === 'skill') {
+      setSkills(true);
+      setLanguages(false);
+      setEducations(false);
+      setCertificates(false);
+      console.log('skills fired');
+      return skill;
+    } else if (a === 'education') {
+      setEducations(true);
+      setSkills(false);
+      setLanguages(false);
+      setCertificates(false);
+      return education;
+    } else if (a === 'certificate') {
+      setCertificates(true);
+      setSkills(false);
+      setLanguages(false);
+      setEducations(false);
+      return certificate;
+    } else if (a === 'language') {
+      setLanguages(true);
+      setSkills(false);
+      setCertificates(false);
+      setEducations(false);
+      return language;
+    }
+  }
   return (
     <Fragment>
       <Navbar></Navbar>
@@ -49,20 +121,58 @@ const About = () => {
               projects. I have really strong googling skills which is really
               important in software world. I really enjoy learning new
               technologies along my journey. In my free time, I spend some of it
-              on online courses.
+              on online courses. <br></br> <br></br> To visit my projects,{' '}
+              <a
+                href='https://www.github.com/sbayrak'
+                target='_blank'
+                rel='noreferrer'
+                style={{
+                  fontSize: '24px',
+                  textDecoration: 'none',
+                  color: '#fff',
+                  fontStyle: 'italic',
+                }}
+              >
+                please click here.
+              </a>
             </p>
             <div className='skills'>
-              <span>Skills</span>
+              <span>
+                <button
+                  onClick={(e) => showSection('skill')}
+                  className={skills && 'active'}
+                >
+                  Skills
+                </button>
 
-              <ul>
-                <li>
-                  <span>Front-end :</span> ReactJS, Redux, HTML, CSS, JS{' '}
-                </li>
-                <li>
-                  <span>Back-end : </span>NodeJS, Express, JS, NoSQL, MongoDB,
-                  RESTAPI
-                </li>
-              </ul>
+                <button
+                  style={{ marginLeft: '30px' }}
+                  onClick={(e) => showSection('education')}
+                  className={educations && 'active'}
+                >
+                  Educations
+                </button>
+
+                <button
+                  style={{ marginLeft: '30px' }}
+                  onClick={(e) => showSection('certificate')}
+                  className={certificates && 'active'}
+                >
+                  Certificates
+                </button>
+
+                <button
+                  style={{ marginLeft: '30px' }}
+                  onClick={(e) => showSection('language')}
+                  className={languages && 'active'}
+                >
+                  Languages
+                </button>
+              </span>
+              {skills ? skill : ''}
+              {educations ? education : ''}
+              {certificates ? certificate : ''}
+              {languages ? language : ''}
             </div>
           </div>
         </div>
