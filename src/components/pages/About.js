@@ -1,8 +1,30 @@
 import React, { Fragment, useState } from 'react';
 import Navbar from '../layout/Navbar';
 import sbayrak from '../layout/sbayrak.png';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 395,
+  },
+  media: {
+    height: 210,
+    width: 395,
+    backgroundSize: 'contain',
+    backgroundColor: 'transparent',
+    backgroundPosition: 'center',
+  },
+});
 const About = () => {
+  const classes = useStyles();
+
   const [skills, setSkills] = useState(true);
   const [educations, setEducations] = useState(false);
   const [certificates, setCertificates] = useState(false);
@@ -14,7 +36,7 @@ const About = () => {
     marginLeft: '100px',
     display: 'flex',
     position: 'relative',
-    paddingTop: '4%',
+    paddingTop: '5%',
   };
 
   const StyleAboutLeft = {
@@ -101,11 +123,65 @@ const About = () => {
       <div className='about' style={{ backgroundColor: '#191919' }}>
         <div className='about-wrapper' style={StyleAbout}>
           <div className='about-left' style={StyleAboutLeft}>
-            <img
-              src={sbayrak}
-              alt='sbayrak'
-              style={{ paddingTop: '15%' }}
-            ></img>
+            <Card
+              className={classes.root}
+              style={{ marginTop: '30%', height: '65%', paddingTop: '18%' }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={sbayrak}
+                  style={{ backgroundColor: 'transparent', width: '100%' }}
+                  title='sbayrak'
+                />
+                <CardContent>
+                  <Typography gutterBottom variant='h5' component='h2'>
+                    Suat Bayrak
+                  </Typography>
+                  <Typography
+                    variant='body2'
+                    color='textSecondary'
+                    component='p'
+                  >
+                    Full-Stack web developer, mostly MERN stack.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size='small'>
+                  <a
+                    href='https://www.github.com/sbayrak'
+                    target='_blank'
+                    rel='noreferrer'
+                    style={{
+                      color: '#000',
+                      fontSize: '18px',
+                      textDecoration: 'none',
+                      borderBottom: '1px solid black',
+                      padding: '5px 15px',
+                    }}
+                  >
+                    GitHub
+                  </a>
+                </Button>
+                <Button size='small' color='primary'>
+                  <a
+                    href='https://www.linkedin.com/in/suat-bayrak-099299154/'
+                    target='_blank'
+                    rel='noreferrer'
+                    style={{
+                      color: '#000',
+                      fontSize: '18px',
+                      textDecoration: 'none',
+                      borderBottom: '1px solid black',
+                      padding: '5px 15px',
+                    }}
+                  >
+                    Linkedin
+                  </a>
+                </Button>
+              </CardActions>
+            </Card>
           </div>
           <div className='about-right' style={StyleAboutRight}>
             <h1>About Me</h1>

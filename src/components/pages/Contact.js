@@ -6,10 +6,14 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [text, setText] = useState('');
+
   return (
     <Fragment>
       <Navbar></Navbar>
-      <div className='contact'>
+      <div
+        className='contact'
+        onMouseMove={(e) => console.log(e.clientY - e.target.offsetTop)}
+      >
         <div className='contact-wrapper'>
           <div className='title'>
             <span>Contact me</span>
