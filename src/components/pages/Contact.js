@@ -18,12 +18,12 @@ const Contact = () => {
           <div className='contact-form'>
             <form
               className='myform'
-              name='contact'
-              netlify
-              netlify-honeypot='bot-field'
-              hidden
+              method='POST'
+              name='contact v1'
+              data-netlify='true'
+              onSubmit='submit'
             >
-              <input type='hidden' name='form-name' value='contact' />
+              <input type='hidden' name='form-name' value='contact v1'></input>
               <input
                 type='text'
                 placeholder='Your Name'
