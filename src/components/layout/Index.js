@@ -1,24 +1,24 @@
 import React from 'react';
 import bgvid from './bgvid.mp4';
 import sbayrak from './sbayrak.jpg';
-import { Link, glide } from 'react-tiger-transition';
+// import { Link, glide } from 'react-tiger-transition';
 import '../../App.css';
 import Navbar from './Navbar';
 import Typical from 'react-typical';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
-  glide({
-    name: 'glide-left',
-    direction: 'left',
-  });
+  // glide({
+  //   name: 'glide-left',
+  //   direction: 'left',
+  // });
   return (
     <div className='welcomer'>
-      <Navbar></Navbar>
-      <Link
+      {/* <Link
         className='welcomer-span2'
         to='/about'
         transition='glide-left'
-      ></Link>
+      ></Link> */}
       <img src={sbayrak} alt='loading....'></img>
       <span className='welcomer-span'>Hi, I'm Suat Bayrak</span>
 
@@ -81,7 +81,7 @@ const Index = () => {
             </a>{' '}
           </li>
         </ul>
-        <Link to='/contact' transition='glide-left' id='contact'>
+        <Link to='/contact' id='contact'>
           Contact
         </Link>
       </div>

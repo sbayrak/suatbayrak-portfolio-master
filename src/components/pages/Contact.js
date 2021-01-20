@@ -9,7 +9,6 @@ const Contact = () => {
 
   return (
     <Fragment>
-      <Navbar></Navbar>
       <div className='contact'>
         <div className='contact-wrapper'>
           <div className='title'>

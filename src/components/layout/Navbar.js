@@ -1,17 +1,18 @@
 import React, { Fragment, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../../App.css';
-import { Link, glide } from 'react-tiger-transition';
+// import { Link, glide } from 'react-tiger-transition';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  glide({
-    name: 'glide-left',
-    direction: 'left',
-  });
-  glide({
-    name: 'glide-right',
-    direction: 'right',
-  });
+  // glide({
+  //   name: 'glide-left',
+  //   direction: 'left',
+  // });
+  // glide({
+  //   name: 'glide-right',
+  //   direction: 'right',
+  // });
   return (
     <Fragment>
       <button
@@ -45,7 +46,7 @@ const Navbar = () => {
             <li>
               <Link
                 to='/'
-                transition='glide-right'
+                // transition='glide-right'
                 className={window.location.pathname === '/' && 'active'}
               >
                 Home
@@ -54,7 +55,7 @@ const Navbar = () => {
             <li>
               <Link
                 to='/about'
-                transition='glide-left'
+                // transition='glide-left'
                 className={window.location.pathname === '/about' && 'active'}
               >
                 About
@@ -63,7 +64,7 @@ const Navbar = () => {
             <li>
               <Link
                 to='/portfolio'
-                transition='glide-left'
+                // transition='glide-left'
                 className={
                   window.location.pathname === '/portfolio' && 'active'
                 }
@@ -74,7 +75,7 @@ const Navbar = () => {
             <li>
               <Link
                 to='/contact'
-                transition='glide-left'
+                // transition='glide-left'
                 className={window.location.pathname === '/contact' && 'active'}
               >
                 Contact
