@@ -6,6 +6,7 @@ import Index from './components/layout/Index';
 import About from './components/pages/About';
 import Portfolio from './components/pages/Portfolio';
 import Contact from './components/pages/Contact';
+import Success from './components/pages/Success';
 
 document.getElementById('root').style.height = '100vh';
 
@@ -20,6 +21,9 @@ const App = () => (
       </Route>
       <Route exact path='/contact'>
         <Contact></Contact>
+      </Route>
+      <Route exact path='/success'>
+        <Success></Success>
       </Route>
       <Route exact path='/'>
         <Index></Index>
