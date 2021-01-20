@@ -6,9 +6,9 @@ import '../../App.css';
 //     .join('&');
 // };
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [text, setText] = useState('');
+  // const [name, setName] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [text, setText] = useState('');
 
   // const handleSubmit = (e) => {
   //   fetch('/', {
