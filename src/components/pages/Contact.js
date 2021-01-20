@@ -41,7 +41,7 @@ const Contact = () => {
               method='POST'
               name='contact'
               data-netlify='true'
-              onSubmit={(e) => handleSubmit(e)}
+              onSubmit={handleSubmit}
             >
               <input type='hidden' name='form-name' value='contact'></input>
 
