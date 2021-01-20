@@ -1,33 +1,33 @@
 import React, { Fragment, useState } from 'react';
 import '../../App.css';
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-};
+// const encode = (data) => {
+//   return Object.keys(data)
+//     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+//     .join('&');
+// };
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [text, setText] = useState('');
 
-  const handleSubmit = (e) => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': 'contact',
-        name: name,
-        email: email,
-        text: text,
-      }),
-    })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => alert(error));
+  // const handleSubmit = (e) => {
+  //   fetch('/', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: encode({
+  //       'form-name': 'contact',
+  //       name: name,
+  //       email: email,
+  //       text: text,
+  //     }),
+  //   })
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((error) => alert(error));
 
-    e.preventDefault();
-  };
+  //   e.preventDefault();
+  // };
   return (
     <Fragment>
       <div className='contact'>
@@ -38,14 +38,13 @@ const Contact = () => {
           <div className='contact-form'>
             <form
               className='myform'
-              method='POST'
+              method='post'
               name='contact'
-              data-netlify='true'
               netlify
-              onSubmit={handleSubmit}
+              data-netlify='true'
             >
               <input type='hidden' name='form-name' value='contact'></input>
-
+              <label htmlFor='name'>Your name: </label>
               <input
                 type='text'
                 placeholder='Your Name'
@@ -53,6 +52,7 @@ const Contact = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></input>
+              <label htmlFor='email'>Your Email: </label>
               <input
                 type='email'
                 placeholder='Your E-Mail'
@@ -60,12 +60,15 @@ const Contact = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
-              <textarea
-                placeholder='Your message'
-                name='message'
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-              ></textarea>
+              <label htmlFor='message'>
+                Your message:
+                <textarea
+                  placeholder='Your message'
+                  name='message'
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                ></textarea>
+              </label>
               <button type='submit'>Send</button>
             </form>
           </div>
