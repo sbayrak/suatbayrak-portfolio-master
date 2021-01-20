@@ -3,7 +3,6 @@ import bgvid from './bgvid.mp4';
 import sbayrak from './sbayrak.jpg';
 // import { Link, glide } from 'react-tiger-transition';
 import '../../App.css';
-import Navbar from './Navbar';
 import Typical from 'react-typical';
 import { Link } from 'react-router-dom';
 

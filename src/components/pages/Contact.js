@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from 'react';
-import Navbar from '../layout/Navbar';
 import '../../App.css';
 
 const Contact = () => {
