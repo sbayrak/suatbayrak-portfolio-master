@@ -13,22 +13,21 @@ const Contact = () => {
       .join('&');
   };
   const handleSubmit = (e) => {
+    e.preventDefault();
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': 'contact',
-        name,
-        email,
-        text,
+        name: name,
+        email: email,
+        text: text,
       }),
     })
       .then((res) => {
         console.log(res);
       })
       .catch((error) => alert(error));
-
-    e.preventDefault();
   };
   return (
     <Fragment>
