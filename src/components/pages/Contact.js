@@ -6,7 +6,36 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [text, setText] = useState('');
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
+  const handleSubmit = (e) => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'contact',
+        name: name.text,
+        email: email.text,
+        text: text.text,
+      }),
+    })
+      .then((res) => {
+        if (res.ok) {
+        } else {
+          throw Error(
+            `Something went wrong and your message was not sent! 🤯 ${res.status} ${res.message}`
+          );
+        }
+      })
+      .catch((error) => alert(error));
 
+    e.preventDefault();
+  };
   return (
     <Fragment>
       <div className='contact'>
@@ -18,13 +47,12 @@ const Contact = () => {
             <form
               className='myform'
               method='POST'
-              name='contact v1'
+              name='contact'
               data-netlify='true'
               action='/success'
-              onSubmit='submit'
-              data-netlify-honeypot='bot-field'
+              onSubmit={(e) => handleSubmit(e)}
             >
-              <input type='hidden' name='form-name' value='contact v1'></input>
+              <input type='hidden' name='form-name' value='contact'></input>
               <div hidden>
                 <input name='bot-field'></input>
               </div>

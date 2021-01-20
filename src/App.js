@@ -16,21 +16,11 @@ const App = () => (
     {/* <Navigation> */}
     <Navbar></Navbar>
     <Switch>
-      <Route exact path='/'>
-        <Index></Index>
-      </Route>
-      <Route exact path='/about'>
-        <About></About>
-      </Route>
-      <Route exact path='/portfolio'>
-        <Portfolio></Portfolio>
-      </Route>
-      <Route exact path='/contact'>
-        <Contact></Contact>
-      </Route>
-      <Route exact path='/success'>
-        <Success></Success>
-      </Route>
+      <Route exact path='/' component={Index}></Route>
+      <Route exact path='/about' component={About}></Route>
+      <Route exact path='/portfolio' component={Portfolio}></Route>
+      <Route exact path='/contact' component={Contact}></Route>
+      <Route exact path='/success' component={Success}></Route>
 
       {/* </Navigation> */}
     </Switch>
