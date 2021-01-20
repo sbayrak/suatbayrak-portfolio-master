@@ -1,19 +1,16 @@
 import React, { Fragment, useState } from 'react';
 import '../../App.css';
-
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [text, setText] = useState('');
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-      )
-      .join('&');
-  };
+
   const handleSubmit = (e) => {
-    e.preventDefault();
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -28,6 +25,8 @@ const Contact = () => {
         console.log(res);
       })
       .catch((error) => alert(error));
+
+    e.preventDefault();
   };
   return (
     <Fragment>
@@ -45,9 +44,7 @@ const Contact = () => {
               onSubmit={(e) => handleSubmit(e)}
             >
               <input type='hidden' name='form-name' value='contact'></input>
-              <div hidden>
-                <input name='bot-field'></input>
-              </div>
+
               <input
                 type='text'
                 placeholder='Your Name'
