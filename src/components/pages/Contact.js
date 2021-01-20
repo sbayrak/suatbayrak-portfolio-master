@@ -49,24 +49,24 @@ const Contact = () => {
                 type='text'
                 placeholder='Your Name'
                 name='name'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                // value={name}
+                // onChange={(e) => setName(e.target.value)}
               ></input>
               <label htmlFor='email'>Your Email: </label>
               <input
                 type='email'
                 placeholder='Your E-Mail'
                 name='email'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                // value={email}
+                // onChange={(e) => setEmail(e.target.value)}
               ></input>
               <label htmlFor='message'>
                 Your message:
                 <textarea
                   placeholder='Your message'
                   name='message'
-                  value={text}
-                  onChange={(e) => setText(e.target.value)}
+                  // value={text}
+                  // onChange={(e) => setText(e.target.value)}
                 ></textarea>
               </label>
               <button type='submit'>Send</button>
