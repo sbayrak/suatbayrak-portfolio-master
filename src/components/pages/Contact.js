@@ -18,9 +18,9 @@ const Contact = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': 'contact',
-        name: name.text,
-        email: email.text,
-        text: text.text,
+        name,
+        email,
+        text,
       }),
     })
       .then((res) => {
