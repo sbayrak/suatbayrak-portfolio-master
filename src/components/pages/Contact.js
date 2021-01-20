@@ -24,12 +24,7 @@ const Contact = () => {
       }),
     })
       .then((res) => {
-        if (res.ok) {
-        } else {
-          throw Error(
-            `Something went wrong and your message was not sent! 🤯 ${res.status} ${res.message}`
-          );
-        }
+        console.log(res);
       })
       .catch((error) => alert(error));
 
@@ -48,7 +43,6 @@ const Contact = () => {
               method='POST'
               name='contact'
               data-netlify='true'
-              action='/success'
               onSubmit={(e) => handleSubmit(e)}
             >
               <input type='hidden' name='form-name' value='contact'></input>
