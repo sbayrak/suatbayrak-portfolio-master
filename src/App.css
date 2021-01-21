@@ -58,6 +58,17 @@
 .navbar .links ul li a.active {
   border: 1px solid rgb(207, 207, 207);
 }
+#btnMenu {
+  position: absolute;
+  cursor: pointer;
+  transition: ease-in-out 0.7s;
+}
+#btnMenu i {
+  position: absolute;
+  padding: 30px 40px;
+  cursor: pointer;
+  color: #fff;
+}
 
 /*  Navbar Ends */
 
@@ -363,12 +374,15 @@
 /* MEDIA QUERIES */
 
 /* For 640 Resolution */
-@media only screen and (min-device-width: 360px) and (max-device-width: 740px) {
+@media only screen and (min-device-width: 360px) and (max-device-width: 680px) {
+  /* NAVBAR STARTS */
+
   .navbar {
     margin-top: 0;
     position: absolute;
     left: -100%;
     transition: ease-in-out 0.7s;
+    z-index: 99;
   }
   .navbar .links {
     height: 100vh;
@@ -403,6 +417,56 @@
   .navbar.active {
     left: 0;
   }
+  #btnMenu {
+    z-index: 99;
+  }
+  #btnMenu i {
+    font-size: 34px;
+  }
+
+  /* NAVBAR ENDS */
+
+  /* INDEX STARTS */
+  .welcomer {
+    background-size: cover;
+    background-position: bottom;
+  }
+  .welcomer .welcomer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 95%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+  }
+  .welcomer .welcomer-wrapper .top {
+    padding-top: 10px;
+    height: 35vh;
+    width: 95%;
+    margin-top: 25px;
+  }
+  .welcomer .welcomer-wrapper .top span {
+    margin-top: 24px;
+    font-size: 30px;
+  }
+
+  .welcomer .welcomer-wrapper .mid span {
+    font-size: 25px;
+    margin: 25px 0;
+  }
+  .welcomer .welcomer-wrapper .mid ul {
+    font-size: 20px;
+  }
+  .welcomer .welcomer-wrapper .bottom {
+    height: 30vh;
+  }
+  .welcomer .welcomer-wrapper .bottom #contact {
+    font-size: 34px;
+    width: 60%;
+    margin: auto 0;
+    padding-top: 10px;
+  }
+  /* INDEX ENDS */
 }
 @media (min-device-width: 741px) {
   #btnMenu {

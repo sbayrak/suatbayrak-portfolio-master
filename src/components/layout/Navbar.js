@@ -9,23 +9,25 @@ const Navbar = () => {
     <Fragment>
       <button
         style={{
-          position: 'absolute',
-          cursor: 'pointer',
+          // position: 'absolute',
+          // cursor: 'pointer',
           left: showMenu ? '-100%' : '0',
-          transition: 'ease-in-out .7s',
+          // transition: 'ease-in-out .7s',
         }}
         id='btnMenu'
         onClick={(e) => setShowMenu(!showMenu)}
       >
         <i
           className='fas fa-bars'
-          style={{
-            position: 'absolute',
-            fontSize: '54px',
-            padding: '30px 40px',
-            cursor: 'pointer',
-            color: '#fff',
-          }}
+          style={
+            {
+              // position: 'absolute',
+              // fontSize: '54px',
+              // padding: '30px 40px',
+              // cursor: 'pointer',
+              // color: '#fff',
+            }
+          }
         ></i>
       </button>
       <div className={showMenu ? 'navbar active' : 'navbar'}>
