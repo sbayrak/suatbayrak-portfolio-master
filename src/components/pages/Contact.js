@@ -1,33 +1,32 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import '../../App.css';
-// const encode = (data) => {
-//   return Object.keys(data)
-//     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-//     .join('&');
-// };
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
 const Contact = () => {
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [text, setText] = useState('');
+  const [name, setName] = useState('suat');
+  const [email, setEmail] = useState('suat.bayrak@bilgiedu.net');
+  const [text, setText] = useState('merhaba');
 
-  // const handleSubmit = (e) => {
-  //   fetch('/', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //     body: encode({
-  //       'form-name': 'contact',
-  //       name: name,
-  //       email: email,
-  //       text: text,
-  //     }),
-  //   })
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((error) => alert(error));
-
-  //   e.preventDefault();
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'contact',
+        name: name,
+        email: email,
+        text: text,
+      }),
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => alert(error));
+  };
   return (
     <Fragment>
       <div className='contact'>
@@ -42,6 +41,7 @@ const Contact = () => {
               name='contact'
               netlify
               data-netlify='true'
+              onSubmit={handleSubmit}
             >
               <input type='hidden' name='form-name' value='contact'></input>
               <label htmlFor='name'>Your name: </label>
