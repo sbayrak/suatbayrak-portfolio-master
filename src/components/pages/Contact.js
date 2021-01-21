@@ -6,9 +6,9 @@ const encode = (data) => {
     .join('&');
 };
 const Contact = () => {
-  const [name, setName] = useState('suat');
-  const [email, setEmail] = useState('suat.bayrak@bilgiedu.net');
-  const [text, setText] = useState('merhaba');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [text, setText] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,14 +37,13 @@ const Contact = () => {
           <div className='contact-form'>
             <form
               className='myform'
-              method='post'
-              name='contact'
-              netlify
-              data-netlify='true'
               onSubmit={handleSubmit}
+              data-netlify='true'
+              name='contact'
+              method='post'
             >
               <input type='hidden' name='form-name' value='contact'></input>
-              <label htmlFor='name'>Your name: </label>
+
               <input
                 type='text'
                 placeholder='Your Name'
@@ -52,7 +51,7 @@ const Contact = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></input>
-              <label htmlFor='email'>Your Email: </label>
+
               <input
                 type='email'
                 placeholder='Your E-Mail'
@@ -60,15 +59,14 @@ const Contact = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
-              <label htmlFor='message'>
-                Your message:
-                <textarea
-                  placeholder='Your message'
-                  name='message'
-                  value={text}
-                  onChange={(e) => setText(e.target.value)}
-                ></textarea>
-              </label>
+
+              <textarea
+                placeholder='Your message'
+                name='message'
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+              ></textarea>
+
               <button type='submit'>Send</button>
             </form>
           </div>
