@@ -1,18 +1,10 @@
 import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../../App.css';
-// import { Link, glide } from 'react-tiger-transition';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  // glide({
-  //   name: 'glide-left',
-  //   direction: 'left',
-  // });
-  // glide({
-  //   name: 'glide-right',
-  //   direction: 'right',
-  // });
+
   return (
     <Fragment>
       <button
@@ -44,42 +36,24 @@ const Navbar = () => {
           ></i>
           <ul>
             <li>
-              <Link
-                to='/'
-                // transition='glide-right'
-                className={window.location.pathname === '/' && 'active'}
-              >
+              <NavLink to='/' exact activeClassName='active'>
                 Home
-              </Link>{' '}
+              </NavLink>
             </li>
             <li>
-              <Link
-                to='/about'
-                // transition='glide-left'
-                className={window.location.pathname === '/about' && 'active'}
-              >
+              <NavLink to='/about' exact activeClassName='active'>
                 About
-              </Link>{' '}
+              </NavLink>
             </li>
             <li>
-              <Link
-                to='/portfolio'
-                // transition='glide-left'
-                className={
-                  window.location.pathname === '/portfolio' && 'active'
-                }
-              >
+              <NavLink to='/portfolio' exact activeClassName='active'>
                 Porfolio
-              </Link>{' '}
+              </NavLink>
             </li>
             <li>
-              <Link
-                to='/contact'
-                // transition='glide-left'
-                className={window.location.pathname === '/contact' && 'active'}
-              >
+              <NavLink to='/contact' exact activeClassName='active'>
                 Contact
-              </Link>{' '}
+              </NavLink>
             </li>
           </ul>
         </div>

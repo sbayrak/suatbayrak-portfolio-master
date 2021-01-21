@@ -5,6 +5,7 @@ import sbayrak from './sbayrak.jpg';
 import '../../App.css';
 import Typical from 'react-typical';
 import { Link } from 'react-router-dom';
+// import EightBitIndex from '8bitindex.png';
 
 const Index = () => {
   // glide({
@@ -87,9 +88,7 @@ const Index = () => {
       <span style={{ position: 'absolute', bottom: 0, color: '#03a062' }}>
         Wake up, Neo.
       </span>
-      <video autoPlay muted loop>
-        <source src={bgvid} type='video/mp4' />{' '}
-      </video>
+      {/* <img src={EightBitIndex} alt='index'></img> */}
     </div>
   );
 };

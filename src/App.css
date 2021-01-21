@@ -65,6 +65,8 @@
 .welcomer {
   height: 100vh;
   background-color: #191919;
+  background-image: url('../src/components/layout/148418.png');
+  background-position: bottom;
   width: 100%;
 }
 .welcomer .welcomer-span {

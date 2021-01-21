@@ -45,6 +45,7 @@ const Portfolio = () => {
             <Grid item xs={12} sm={6}>
               <Card
                 className={classes.root}
+                sm
                 style={{ boxShadow: '0px 0px 14px 3px rgba(0, 0, 0, 0.49)' }}
               >
                 <CardActionArea>
@@ -52,6 +53,7 @@ const Portfolio = () => {
                     component='img'
                     alt='auctionhouse'
                     height='90'
+                    sm
                     image={mern}
                     style={{
                       backgroundSize: 'cover',
@@ -65,6 +67,7 @@ const Portfolio = () => {
                     </Typography>
                     <Typography
                       variant='body2'
+                      sm
                       color='textSecondary'
                       component='p'
                     >
