@@ -376,7 +376,7 @@
 
 /* mobile starts */
 /* For 640 Resolution */
-@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
   /* NAVBAR STARTS */
 
   .navbar {
@@ -622,17 +622,8 @@
     font-size: 25px;
   }
 
-  .welcomer .welcomer-wrapper {
-    top: 55%;
-    width: 80%;
-  }
-  .welcomer .welcomer-wrapper .top img {
-    width: 25%;
-    padding-top: 5px;
-  }
-
   .welcomer .welcomer-wrapper .mid span {
-    font-size: 36px;
+    font-size: 44px;
   }
 }
 /* desktop ends */
