@@ -611,7 +611,7 @@
 /* laptop ends */
 
 /* desktop starts */
-@media only screen and (min-device-width: 1281px) and (min-width: 1440px) {
+@media only screen and (min-device-width: 1281px) and (max-device-width: 1440px) {
   .navbar .links ul {
     width: 75%;
   }
@@ -626,7 +626,7 @@
     height: 80vh;
   }
   .welcomer .welcomer-wrapper .mid span {
-    font-size: 44px;
+    font-size: 34px;
   }
 }
 /* desktop ends */
