@@ -561,7 +561,7 @@
 /* tablet ends */
 
 /* laptop starts */
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1370px) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1280px) {
   .navbar {
     margin-top: 10px;
     position: fixed;
@@ -611,7 +611,7 @@
 /* laptop ends */
 
 /* desktop starts */
-@media only screen and (min-device-width: 1371px) and (max-device-width: 2400px) {
+@media only screen and (min-device-width: 1281px) and (min-width: 1440px) {
   .navbar .links ul {
     width: 75%;
   }
@@ -622,8 +622,23 @@
     font-size: 25px;
   }
 
+  .welcomer .welcomer-wrapper {
+    height: 80vh;
+  }
   .welcomer .welcomer-wrapper .mid span {
     font-size: 44px;
   }
 }
 /* desktop ends */
+
+@media only screen and (min-width: 1441px) {
+  .welcomer .welcomer-wrapper {
+    padding-top: 4%;
+  }
+  .welcomer .welcomer-wrapper .top span {
+    margin-bottom: 20px;
+  }
+  .welcomer .welcomer-wrapper .bottom ul {
+    margin-bottom: 20px;
+  }
+}
