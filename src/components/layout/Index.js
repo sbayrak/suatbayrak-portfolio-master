@@ -1,8 +1,9 @@
 import React from 'react';
-import sbayrak from './sbayrak.jpg';
 import '../../App.css';
 import About from '../pages/About';
 import Typical from 'react-typical';
+import Inter1 from '../pages/Inter1';
+import Inter2 from '../pages/Inter2';
 
 const Index = () => {
   return (
@@ -41,19 +42,9 @@ const Index = () => {
         </div>
       </div>
       {/* welcomer ends above div */}
-      <div className='inter1'>
-        <div className='inter1-wrapper'>
-          <span>Go into my GitHub Repository</span>
-          <a
-            href='https://www.github.com/sbayrak'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <i class='fab fa-github'></i>
-          </a>
-        </div>
-      </div>
+      <Inter1></Inter1>
       <About></About>
+      <Inter2></Inter2>
     </div>
   );
 };

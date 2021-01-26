@@ -2,6 +2,7 @@
   font-family: 'vt323';
   src: url('./VT323-Regular.ttf') format('truetype');
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
   margin: 0;
@@ -150,7 +151,22 @@
 .inter1 .inter1-wrapper a:hover {
   color: #fff;
 }
-
+.inter2 {
+  height: 45vh;
+  width: 100%;
+  background-color: #191919;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.inter2 .inter2-wrapper {
+  text-align: center;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid white;
+}
 /* Inter divler */
 
 /* Home starts */
@@ -159,91 +175,50 @@
 
 /* About Starts */
 .about {
-  background-color: #191919;
   background-image: url('./components/layout/8bitcity.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  width: 100%;
+  padding: 5px;
+  height: 80vh;
 }
-.about .about-wrapper {
-  background-image: url('./components/layout/8bitcity.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
+.about .top {
+  text-align: center;
+  font-size: 54px;
+  width: 20%;
+  margin: 0 auto;
+  letter-spacing: 8px;
+  transform: translateY(40%);
 }
-.about .about-wrapper .about-left {
-}
-.about .about-wrapper .about-right {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-}
-.about .about-wrapper .about-right h1 {
-  color: #fff;
-  font-size: 84px;
-  font-weight: 400;
-  letter-spacing: 7px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid rgba(207, 207, 207, 0.5);
-}
-
-.about .about-wrapper .about-right .intro {
-  color: rgb(190, 190, 190);
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.about .about-wrapper .about-right .intro a {
-  border-bottom: 3px solid rgb(0, 0, 0);
-  transition: ease-in-out 0.7s;
-}
-.about .about-wrapper .about-right .intro a:hover {
-  border-bottom: 3px solid rgb(255, 255, 255);
-}
-
-.about .about-wrapper .about-right .skills {
-  margin-top: 25px;
-  border-bottom: 1px solid rgba(207, 207, 207, 0.5);
-}
-.about .about-wrapper .about-right .skills span {
-  font-size: 45px;
-  border-bottom: 1px solid rgba(207, 207, 207, 0.5);
-}
-.about .about-wrapper .about-right .skills span button {
-  color: rgb(255, 255, 255);
-  background-color: #191919;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: ease-in-out 0.7s;
-  font-size: 45px;
-  border-bottom: 3px solid rgb(0, 0, 0);
-}
-.about .about-wrapper .about-right .skills span button:hover {
-  border-bottom: 3px solid rgb(255, 255, 255);
-}
-.about .about-wrapper .about-right .skills span button.active {
-  border-bottom: 3px solid rgb(255, 255, 255);
-}
-.about .about-wrapper .about-right .skills ul {
+.about .bottom {
+  width: 95%;
+  margin: 0 auto;
   display: flex;
-  color: #fff;
+  justify-content: space-around;
+  align-items: center;
+}
+.about .bottom .left img {
+  border-radius: 10%;
+}
+.about .bottom .right {
+  width: 50%;
+  display: flex;
   flex-direction: column;
-  margin-top: 15px;
-  list-style: none;
-  font-size: 18px;
-  font-weight: 100;
-  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-evenly;
+  font-family: 'Poppins', sans-serif;
 }
-.about .about-wrapper .about-right .skills ul li {
-  margin-bottom: 10px;
-  color: rgb(190, 190, 190);
-  font-size: 20px;
-}
-.about .about-wrapper .about-right .skills ul li span {
-  font-size: 20px;
-  font-weight: 500;
-  border: none;
+.about .bottom .right span {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 30px;
 }
 
+.about .bottom .right #span1 {
+  margin-bottom: 40px;
+  font-weight: 400;
+}
 /* About Ends */
 
 /* Portfolio starts */
