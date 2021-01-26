@@ -74,118 +74,84 @@
 /*  Navbar Ends */
 
 /* Index starts */
-
 .welcomer {
-  background-color: #191919;
-  width: 100%;
+  background-image: url('./components/layout/matrixbg.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
-  background-image: url('../src/components/layout/8bitbg2.png');
-  background-position: bottom;
+  background-size: cover;
+  width: 100%;
 }
 .welcomer .welcomer-wrapper {
-  height: 75vh;
-  width: 50%;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  margin: auto 0;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 5px;
-}
-
-.welcomer .welcomer-wrapper .top {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 60%;
   margin: 0 auto;
-  border-bottom: 1px solid white;
+  position: relative;
+  top: 35%;
+  text-align: left;
+  border-right: 1px solid rgba(207, 207, 207, 0.5);
 }
-.welcomer .welcomer-wrapper .top img {
-  border-radius: 50%;
-  width: 35%;
+.welcomer .welcomer-wrapper .top p {
+  color: #fff;
+  font-size: 64px;
+  margin-bottom: 10px;
 }
 .welcomer .welcomer-wrapper .top span {
-  color: white;
-  font-size: 64px;
+  color: #fff;
+  font-size: 84px;
   letter-spacing: 5px;
 }
-.welcomer .welcomer-wrapper .top span::before {
-  content: '';
-  border-bottom: 1px solid white;
-}
-.welcomer .welcomer-wrapper .mid {
-  width: 80%;
-  margin: auto;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid white;
-}
 .welcomer .welcomer-wrapper .mid span {
-  font-size: 54px;
   color: #fff;
+  font-size: 84px;
 }
-.welcomer .welcomer-wrapper .mid ul {
-  list-style: none;
-  width: 100%;
+.welcomer .welcomer-wrapper .bottom button {
   margin-top: 20px;
-  font-size: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  color: #fff;
-}
-.welcomer .welcomer-wrapper .bottom {
-  width: 70%;
-  margin: auto;
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.welcomer .welcomer-wrapper .bottom ul {
-  color: #fff;
-  width: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  font-size: 45px;
-}
-.welcomer .welcomer-wrapper .bottom ul li a {
-  color: rgb(129, 129, 129);
-  text-decoration: none;
-  transition: ease-in-out 0.5s;
-}
-.welcomer .welcomer-wrapper .bottom ul li a:hover {
-  color: #fff;
-}
-.welcomer .welcomer-wrapper .bottom #contact {
-  border: 1px solid rgb(129, 129, 129);
-  margin-top: 15px;
-  width: 30%;
-  height: 30%;
-  padding: 8px 5px;
-  background-color: #fff;
+  padding: 10px 20px;
+  font-size: 54px;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  font-size: 34px;
-  text-decoration: none;
-  color: #000;
+  outline: none;
   transition: ease-in-out 0.5s;
+  border: 1px solid white;
+  cursor: pointer;
 }
-.welcomer .welcomer-wrapper .bottom #contact:hover {
-  width: 33%;
-  background-color: #fff;
+.welcomer .welcomer-wrapper .bottom button:hover {
+  background-color: #191919;
+  color: #fff;
 }
 /* Index ends */
+
+/* Inter divler */
+.inter1 {
+  height: 20vh;
+  width: 100%;
+  background-color: #191919;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.inter1 .inter1-wrapper {
+  text-align: center;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.inter1 .inter1-wrapper span {
+  color: #fff;
+  font-size: 50px;
+}
+.inter1 .inter1-wrapper a {
+  color: rgb(190, 190, 190);
+  transition: ease-in-out 0.5s;
+  font-size: 50px;
+}
+.inter1 .inter1-wrapper a:hover {
+  color: #fff;
+}
+
+/* Inter divler */
 
 /* Home starts */
 
@@ -206,11 +172,9 @@
   background-position: bottom;
 }
 .about .about-wrapper .about-left {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 .about .about-wrapper .about-right {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(0, 0, 0, 0.85);
   font-weight: 400;
 }
 .about .about-wrapper .about-right h1 {
@@ -429,45 +393,7 @@
   /* NAVBAR ENDS */
 
   /* INDEX STARTS */
-  .welcomer {
-    background-size: cover;
-    background-position: bottom;
-  }
-  .welcomer .welcomer-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 95%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.95);
-  }
-  .welcomer .welcomer-wrapper .top {
-    padding-top: 10px;
-    height: 35vh;
-    width: 95%;
-    margin-top: 25px;
-  }
-  .welcomer .welcomer-wrapper .top span {
-    margin-top: 24px;
-    font-size: 30px;
-  }
 
-  .welcomer .welcomer-wrapper .mid span {
-    font-size: 25px;
-    margin: 25px 0;
-  }
-  .welcomer .welcomer-wrapper .mid ul {
-    font-size: 20px;
-  }
-  .welcomer .welcomer-wrapper .bottom {
-    height: 30vh;
-  }
-  .welcomer .welcomer-wrapper .bottom #contact {
-    font-size: 34px;
-    width: 60%;
-    margin: auto 0;
-    padding-top: 10px;
-  }
   /* INDEX ENDS */
 }
 
@@ -536,25 +462,6 @@
   /* NAVBAR ENDS */
 
   /* INDEX STARTS */
-  .welcomer {
-    background-size: cover;
-    background-position: bottom;
-  }
-  .welcomer .welcomer-wrapper {
-    width: 80%;
-    height: 90vh;
-  }
-  .welcomer .welcomer-wrapper .top {
-    padding-top: 2%;
-  }
-  .welcomer .welcomer-wrapper .top span {
-    font-size: 36px;
-    margin-bottom: 18px;
-  }
-
-  .welcomer .welcomer-wrapper .mid span {
-    font-size: 30px;
-  }
 
   /* INDEX ENDS */
 }
@@ -579,31 +486,6 @@
     margin: 0 auto;
   }
   .navbar .links ul li a {
-    font-size: 24px;
-  }
-
-  .welcomer {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: bottom;
-  }
-  .welcomer .welcomer-wrapper {
-    width: 80%;
-    height: 85vh;
-    top: 55%;
-  }
-  .welcomer .welcomer-wrapper .top img {
-    width: 30%;
-  }
-  .welcomer .welcomer-wrapper .top span {
-    font-size: 44px;
-    margin-bottom: 10px;
-  }
-  .welcomer .welcomer-wrapper .mid span {
-    font-size: 34px;
-  }
-  .welcomer .welcomer-wrapper .mid ul li {
     font-size: 24px;
   }
 }
@@ -632,13 +514,4 @@
 /* desktop ends */
 
 @media only screen and (min-width: 1441px) {
-  .welcomer .welcomer-wrapper {
-    padding-top: 4%;
-  }
-  .welcomer .welcomer-wrapper .top span {
-    margin-bottom: 20px;
-  }
-  .welcomer .welcomer-wrapper .bottom ul {
-    margin-bottom: 20px;
-  }
 }
