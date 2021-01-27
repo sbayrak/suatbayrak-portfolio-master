@@ -4,6 +4,8 @@ import About from '../pages/About';
 import Typical from 'react-typical';
 import Inter1 from '../pages/Inter1';
 import Inter2 from '../pages/Inter2';
+import Portfolio from '../pages/Portfolio';
+import Contact from '../pages/Contact';
 
 const Index = () => {
   return (
@@ -45,6 +47,8 @@ const Index = () => {
       <Inter1></Inter1>
       <About></About>
       <Inter2></Inter2>
+      <Portfolio></Portfolio>
+      <Contact></Contact>
     </div>
   );
 };
