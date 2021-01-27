@@ -191,6 +191,49 @@
 .inter2 .inter2-wrapper .bottom ul li a:hover {
   color: #fff;
 }
+
+.inter3{
+  width: 100%;
+  height: 20vh;
+  background-color: #919191; 
+  background-image: url('./components/layout/8bitindex2.png');
+  background-position: center;
+  background-attachment: fixed;
+
+}
+.inter3 .inter3-wrapper{
+  height: 20vh;
+  width: 90%;
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.inter3 .inter3-wrapper .left{
+  
+  text-align: center;
+}
+.inter3 .inter3-wrapper .left span{
+  color: #fff;
+  font-size: 44px;
+}
+.inter3 .inter3-wrapper .right{
+  color: #fff;
+}
+.inter3 .inter3-wrapper .right a{
+  font-size: 34px;
+  color: #fff; 
+}
+.inter3 .inter3-wrapper .right span{
+  font-size: 34px;
+  
+}
+.inter3 .inter3-wrapper .right a i{
+font-style: italic;
+  text-decoration: underline;
+}
 /* Inter divler */
 
 /* Home starts */
@@ -247,13 +290,22 @@
 
 /* Portfolio starts */
 .portfolio {
-  max-width: 100%;
-  height: 130vh;
+  max-width: 100%; 
+  display: flex;
+  flex-direction: column;
 }
 .portfolio .portfolio-wrapper {
-  max-width: 90%;
+  max-width: 70%;
   margin: 0 auto;
   margin-bottom: 20px;
+}
+.portfolio   #title{ 
+  width: 30%;
+  margin: 0 auto;
+  text-align: center; 
+  font-size: 84px; 
+  margin-top: 150px;
+  border-bottom: 1px solid black;
 }
 .portfolio .portfolio-wrapper .repos {
   display: grid;
@@ -270,7 +322,7 @@
   padding: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.2);
-  transition: ease-in-out 0.5s;
+  transition: ease-in-out .2s;
 }
 .portfolio .portfolio-wrapper .repos .card:hover {
   box-shadow: 1px 3px 1px 2px rgba(0, 0, 0, 0.5);
