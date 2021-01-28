@@ -20,6 +20,10 @@ const Navbar = () => {
     });
   });
 
+  const menuFunc = (e) => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <Fragment>
       <div
@@ -32,8 +36,8 @@ const Navbar = () => {
             <span id='name'>Suat Bayrak</span>
           </div>
           <div className='right'>
-            <i class='fas fa-bars'></i>
-            <ul>
+            <i className='fas fa-bars' onClick={(e) => menuFunc(e)}></i>
+            <ul className={showMenu ? 'active' : ''}>
               <li>
                 <NavLink to='/' exact activeClassName='active'>
                   Home
