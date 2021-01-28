@@ -7,6 +7,7 @@ import Inter2 from '../pages/Inter2';
 import Portfolio from '../pages/Portfolio';
 import Contact from '../pages/Contact';
 import Inter3 from '../pages/Inter3';
+import Footer from '../pages/Footer';
 
 const Index = () => {
   return (
@@ -51,6 +52,7 @@ const Index = () => {
       <Portfolio></Portfolio>
       <Inter3></Inter3>
       <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 };

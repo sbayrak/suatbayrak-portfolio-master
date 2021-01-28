@@ -1,63 +1,62 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import myLogo from './myLogo.png';
 import '../../App.css';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [bgColor, setBgColor] = useState('rgba(0,0,0,.1)');
+
+  useEffect(() => {
+    let listener = null;
+    // eslint-disable-next-line no-unused-vars
+    listener = document.addEventListener('scroll', (e) => {
+      var scrolled = document.scrollingElement.scrollTop;
+      if (scrolled >= 200) {
+        setBgColor('rgba(0,0,0,.9)');
+      } else if (scrolled < 200) {
+        setBgColor('rgba(0,0,0,.1)');
+      }
+    });
+  });
 
   return (
     <Fragment>
-      <button
-        style={{
-          // position: 'absolute',
-          // cursor: 'pointer',
-          left: showMenu ? '-100%' : '0',
-          // transition: 'ease-in-out .7s',
-        }}
-        id='btnMenu'
-        onClick={(e) => setShowMenu(!showMenu)}
+      <div
+        className='navbar'
+        style={{ transition: 'ease-in-out 0.5s', backgroundColor: bgColor }}
       >
-        <i
-          className='fas fa-bars'
-          style={
-            {
-              // position: 'absolute',
-              // fontSize: '54px',
-              // padding: '30px 40px',
-              // cursor: 'pointer',
-              // color: '#fff',
-            }
-          }
-        ></i>
-      </button>
-      <div className={showMenu ? 'navbar active' : 'navbar'}>
-        <div className='links'>
-          <i
-            className='fas fa-arrow-left'
-            onClick={(e) => setShowMenu(!showMenu)}
-          ></i>
-          <ul>
-            <li>
-              <NavLink to='/' exact activeClassName='active'>
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/about' exact activeClassName='active'>
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/portfolio' exact activeClassName='active'>
-                Porfolio
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/contact' exact activeClassName='active'>
-                Contact
-              </NavLink>
-            </li>
-          </ul>
+        <div className='navbar-wrapper'>
+          <div className='left'>
+            <img src={myLogo} alt='logo' />
+            <span id='name'>Suat Bayrak</span>
+          </div>
+          <div className='right'>
+            <i class='fas fa-bars'></i>
+            <ul>
+              <li>
+                <NavLink to='/' exact activeClassName='active'>
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to='/about' exact activeClassName='active'>
+                  About
+                </NavLink>
+              </li>
+              <li>
+                {' '}
+                <NavLink to='/portfolio' exact activeClassName='active'>
+                  Porfolio
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to='/contact' exact activeClassName='active'>
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </Fragment>
