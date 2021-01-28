@@ -52,7 +52,6 @@ const Index = () => {
       <Portfolio></Portfolio>
       <Inter3></Inter3>
       <Contact></Contact>
-      <Footer></Footer>
     </div>
   );
 };

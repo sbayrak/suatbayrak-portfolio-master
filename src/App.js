@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Index from './components/layout/Index';
 import Navbar from './components/layout/Navbar';
 import Error from '../src/components/pages/Error';
+import Footer from './components/pages/Footer';
 
 // document.getElementById('root').style.height = '100vh';
 
@@ -17,6 +18,7 @@ const App = () => (
       <Route component={Error}></Route>
       {/* </Navigation> */}
     </Switch>
+    <Footer></Footer>
   </Router>
 );
 

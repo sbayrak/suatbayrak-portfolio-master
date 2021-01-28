@@ -8,10 +8,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   font-family: 'vt323', monospace;
 }
-
+.main {
+  width: 100%;
+}
 /*  Navbar starts */
 .navbar {
   position: fixed;
@@ -488,49 +489,24 @@
 
 /* mobile starts */
 /* For 640 Resolution */
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .navbar {
     position: fixed;
-    z-index: 199;
-    top: 0;
-  }
-  .navbar .navbar-wrapper {
-    width: 100%;
-  }
-  .navbar .navbar-wrapper .left {
-    border: 1px solid white;
-    width: 25%;
-  }
-  .navbar .navbar-wrapper .left #name {
-    font-size: 24px;
-  }
-
-  .navbar .navbar-wrapper .right {
-    width: 60%;
-    border: 1px solid white;
-  }
-
-  .welcomer {
-    background-size: cover;
-    width: 100%;
-  }
-  .welcomer .welcomer-wrapper {
-    width: 60%;
   }
 }
 
 /* tablet starts */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 }
 /* tablet ends */
 
 /* laptop starts */
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1280px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
 }
 /* laptop ends */
 
 /* desktop starts */
-@media only screen and (min-device-width: 1281px) and (max-device-width: 1440px) {
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
   .welcomer .welcomer-wrapper {
     height: 80vh;
   }
