@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <Fragment>
-      <div
+      <nav
         className='navbar'
         style={{ transition: 'ease-in-out 0.5s', backgroundColor: bgColor }}
       >
@@ -62,7 +62,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </nav>
     </Fragment>
   );
 };

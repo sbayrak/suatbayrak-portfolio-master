@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import '../../App.css';
 import About from '../pages/About';
 import Typical from 'react-typical';
@@ -10,7 +10,7 @@ import Inter3 from '../pages/Inter3';
 
 const Index = () => {
   return (
-    <div className='main'>
+    <Fragment>
       <div className='welcomer'>
         <div className='welcomer-wrapper'>
           <div className='top'>
@@ -51,7 +51,7 @@ const Index = () => {
       <Portfolio></Portfolio>
       <Inter3></Inter3>
       <Contact></Contact>
-    </div>
+    </Fragment>
   );
 };
 
