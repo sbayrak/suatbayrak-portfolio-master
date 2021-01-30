@@ -147,7 +147,7 @@ nav .navbar-wrapper .right ul li a {
   color: #fff;
 }
 .inter2 {
-  height: 40vh;
+  height: 30vh;
   width: 100%;
   background-color: #191919;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -155,7 +155,7 @@ nav .navbar-wrapper .right ul li a {
 }
 .inter2 .inter2-wrapper {
   text-align: center;
-  height: 40vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -167,7 +167,7 @@ nav .navbar-wrapper .right ul li a {
 }
 .inter2 .inter2-wrapper .top span {
   color: #fff;
-  font-size: 84px;
+  font-size: 74px;
 }
 .inter2 .inter2-wrapper .bottom {
   width: 70%;
@@ -824,16 +824,70 @@ nav .navbar-wrapper .right ul li a {
 
 /* laptop starts */
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .welcomer .welcomer-wrapper {
+    width: 90%;
+    top: 25%;
+    height: 60vh;
+  }
+  .welcomer .welcomer-wrapper .top p {
+    font-size: 64px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .welcomer .welcomer-wrapper .top span {
+    font-size: 74px;
+  }
+  .welcomer .welcomer-wrapper .mid span {
+    font-size: 60px;
+    line-height: 100px;
+  }
+  .inter2 {
+    height: 25vh;
+  }
+  .inter2 .inter2-wrapper {
+    height: 25vh;
+  }
+  .inter2 .inter2-wrapper .top span {
+    font-size: 44px;
+  }
+  .inter2 .inter2-wrapper .bottom ul {
+    font-size: 44px;
+    justify-content: space-around;
+  }
 }
 /* laptop ends */
 
 /* desktop starts */
 @media only screen and (min-width: 1281px) and (max-width: 1440px) {
   .welcomer .welcomer-wrapper {
-    height: 80vh;
+    width: 90%;
+    top: 25%;
+    height: 60vh;
+  }
+  .welcomer .welcomer-wrapper .top p {
+    font-size: 64px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .welcomer .welcomer-wrapper .top span {
+    font-size: 74px;
   }
   .welcomer .welcomer-wrapper .mid span {
-    font-size: 34px;
+    font-size: 60px;
+    line-height: 100px;
+  }
+  .inter2 {
+    height: 25vh;
+  }
+  .inter2 .inter2-wrapper {
+    height: 25vh;
+  }
+  .inter2 .inter2-wrapper .top span {
+    font-size: 44px;
+  }
+  .inter2 .inter2-wrapper .bottom ul {
+    font-size: 44px;
+    justify-content: space-around;
   }
 }
 /* desktop ends */
