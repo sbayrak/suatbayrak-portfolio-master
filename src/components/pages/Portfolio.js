@@ -35,7 +35,7 @@ const Portfolio = () => {
 
   return (
     <Fragment>
-      <div className='portfolio'>
+      <div className='portfolio' id='portfolio'>
         <span id='title'>Portfolio</span>
         <div className='portfolio-wrapper'>
           <div className='repos'>

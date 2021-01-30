@@ -4,7 +4,7 @@ import sbayrak from '../layout/sbayrak.jpg';
 const About = () => {
   return (
     <Fragment>
-      <div className='about'>
+      <div className='about' id='about'>
         <div className='about-wrapper'>
           <div className='top'>
             <span>ABOUT ME</span>

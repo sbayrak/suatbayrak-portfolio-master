@@ -43,7 +43,7 @@ const Contact = () => {
   };
   return (
     <Fragment>
-      <div className='contact'>
+      <div className='contact' id='contact'>
         <div className='contact-wrapper'>
           <div className='title'>
             <span>Contact me</span>

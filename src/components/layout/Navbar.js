@@ -1,11 +1,13 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import myLogo from './myLogo.png';
 import '../../App.css';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [bgColor, setBgColor] = useState('rgba(0,0,0,.1)');
+  const [navActive, setNavActive] = useState(false);
 
   useEffect(() => {
     let listener = null;
@@ -39,24 +41,31 @@ const Navbar = () => {
             <i className='fas fa-bars' onClick={(e) => menuFunc(e)}></i>
             <ul className={showMenu ? 'active' : ''}>
               <li>
-                <NavLink to='/' exact activeClassName='active'>
-                  Home
+                <NavLink to='/' exact>
+                  <NavHashLink to='#welcomer' smooth>
+                    Home
+                  </NavHashLink>
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/about' exact activeClassName='active'>
-                  About
+                <NavLink to='#about' href='#about' exact>
+                  <NavHashLink to='#about' smooth>
+                    About
+                  </NavHashLink>
                 </NavLink>
               </li>
               <li>
-                {' '}
-                <NavLink to='/portfolio' exact activeClassName='active'>
-                  Porfolio
+                <NavLink to='#portfolio' href='#portfolio' exact>
+                  <NavHashLink to='#portfolio' smooth>
+                    Porfolio
+                  </NavHashLink>
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/contact' exact activeClassName='active'>
-                  Contact
+                <NavLink to='#contact' href='#contact' exact>
+                  <NavHashLink to='#contact' smooth>
+                    Contact
+                  </NavHashLink>
                 </NavLink>
               </li>
             </ul>

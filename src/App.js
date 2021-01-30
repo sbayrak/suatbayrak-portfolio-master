@@ -8,7 +8,6 @@ import Error from '../src/components/pages/Error';
 import Footer from './components/pages/Footer';
 
 // document.getElementById('root').style.height = '100vh';
-
 const App = () => (
   <Router>
     {/* <Navigation> */}

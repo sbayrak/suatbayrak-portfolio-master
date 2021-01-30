@@ -61,10 +61,19 @@ nav .navbar-wrapper .right ul {
   width: 100%;
   transition: ease-in-out 0.5s;
 }
+nav .navbar-wrapper .right ul li {
+  text-align: center;
+}
 nav .navbar-wrapper .right ul li a {
   text-decoration: none;
   font-size: 20px;
   color: #fff;
+}
+nav .navbar-wrapper .right ul li a.active2 {
+  padding: 10px 20px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
 }
 
 /*  Navbar Ends */
@@ -235,6 +244,7 @@ nav .navbar-wrapper .right ul li a {
 
 /* About Starts */
 .about {
+  scroll-behavior: smooth;
   background-image: url('./components/layout/8bitcity.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -891,6 +901,3 @@ nav .navbar-wrapper .right ul li a {
   }
 }
 /* desktop ends */
-
-@media only screen and (min-width: 1441px) {
-}

@@ -3,7 +3,7 @@ import Typical from 'react-typical';
 
 const Home = () => {
   return (
-    <div className='welcomer'>
+    <div className='welcomer' id='welcomer'>
       <div className='welcomer-wrapper'>
         <div className='top'>
           <p>Welcome!</p>
