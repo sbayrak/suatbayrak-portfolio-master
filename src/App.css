@@ -274,6 +274,9 @@ nav .navbar-wrapper .right ul li a.active2 {
   justify-content: space-around;
   align-items: center;
 }
+.about .about-wrapper .bottom .left {
+  border: 1px solid black;
+}
 .about .about-wrapper .bottom .left img {
   border-radius: 10%;
 }
@@ -504,7 +507,7 @@ nav .navbar-wrapper .right ul li a.active2 {
 
 /* mobile starts */
 /* For 640 Resolution */
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 315px) and (max-width: 767px) {
   nav {
     position: fixed;
     top: 0px;
@@ -588,9 +591,12 @@ nav .navbar-wrapper .right ul li a.active2 {
   .about .about-wrapper .bottom .left {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
   .about .about-wrapper .bottom .left img {
     width: 55%;
+    height: 27vh;
+    object-fit: contain;
   }
   .about .about-wrapper .bottom .right {
     margin-top: 20px;
