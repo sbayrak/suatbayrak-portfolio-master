@@ -15,7 +15,7 @@ const Inter2 = () => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <i class='fab fa-instagram'></i>
+                <i className='fab fa-instagram'></i>
               </a>
             </li>
             <li>
@@ -24,7 +24,7 @@ const Inter2 = () => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <i class='fab fa-linkedin'></i>
+                <i className='fab fa-linkedin'></i>
               </a>
             </li>
             <li>
@@ -33,7 +33,7 @@ const Inter2 = () => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <i class='fab fa-github'></i>
+                <i className='fab fa-github'></i>
               </a>
             </li>
           </ul>

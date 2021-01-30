@@ -10,7 +10,7 @@ const Inter1 = () => {
           target='_blank'
           rel='noreferrer'
         >
-          <i class='fab fa-github'></i>
+          <i className='fab fa-github'></i>
         </a>
       </div>
     </div>
