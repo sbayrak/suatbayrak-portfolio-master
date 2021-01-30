@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import Typical from 'react-typical';
+import Spinner from '../layout/Spinner';
+import styled from 'styled-components';
 
 const Home = () => {
   const welcomer = {
@@ -31,6 +33,21 @@ const Home = () => {
     cursor: 'pointer',
   };
 
+  const Button = styled.button`
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 54px;
+    border-radius: 5px;
+    outline: none;
+    transition: ease-in-out 0.5s;
+    border: 1px solid white;
+    cursor: pointer;
+    &:hover {
+      background-color: #191919;
+      color: #fff;
+    }
+  `;
+
   return (
     <div className='welcomer' id='welcomer'>
       <div className='welcomer-wrapper'>
@@ -59,7 +76,8 @@ const Home = () => {
           </span>
         </div>
         <div className='bottom'>
-          <button>Contact</button>
+          {/* <button>Contact</button> */}
+          <Button>Contact</Button>
         </div>
       </div>
     </div>
