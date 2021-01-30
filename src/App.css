@@ -469,11 +469,6 @@ nav .navbar-wrapper .right ul li a.active2 {
   float: left;
   transition: ease-in-out 0.7s;
 }
-.contact .contact-wrapper .contact-form form button:hover {
-  background-color: rgb(34, 34, 34);
-  border: 1px solid white;
-  color: rgb(255, 255, 255);
-}
 /* Contact ends */
 
 /* Footer */
