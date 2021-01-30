@@ -663,6 +663,162 @@ nav .navbar-wrapper .right ul li a {
 
 /* tablet starts */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    position: fixed;
+    top: 0px;
+  }
+  nav .navbar-wrapper .right i {
+    display: block;
+  }
+  nav .navbar-wrapper .right ul {
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+  nav .navbar-wrapper .right ul.active {
+    left: 0%;
+  }
+
+  nav .navbar-wrapper .right i {
+    text-align: right;
+    font-size: 42px;
+    margin-top: 25px;
+  }
+  nav .navbar-wrapper .right ul li a {
+    font-size: 36px;
+  }
+  .welcomer .welcomer-wrapper {
+    width: 90%;
+    top: 25%;
+    height: 60vh;
+  }
+  .welcomer .welcomer-wrapper .top p {
+    font-size: 54px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .welcomer .welcomer-wrapper .top span {
+    font-size: 54px;
+  }
+  .welcomer .welcomer-wrapper .mid span {
+    font-size: 60px;
+    line-height: 100px;
+  }
+  .welcomer .welcomer-wrapper .bottom button {
+    font-size: 44px;
+  }
+  .inter1 .inter1-wrapper span {
+    font-size: 38px;
+  }
+  .inter1 .inter1-wrapper a {
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+  .about {
+    height: 100vh;
+  }
+  .about .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about .about-wrapper .top {
+    width: 80%;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .about .about-wrapper .top span {
+    text-align: center;
+    font-size: 34px;
+  }
+  .about .about-wrapper .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about .about-wrapper .bottom .left {
+    display: flex;
+    justify-content: center;
+  }
+  .about .about-wrapper .bottom .left img {
+    width: 55%;
+  }
+  .about .about-wrapper .bottom .right {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .about .about-wrapper .bottom .right span {
+    line-height: 25px;
+  }
+  .inter2 {
+    height: 25vh;
+  }
+  .inter2 .inter2-wrapper {
+    height: 25vh;
+  }
+  .inter2 .inter2-wrapper .top span {
+    font-size: 44px;
+  }
+  .inter2 .inter2-wrapper .bottom ul {
+    font-size: 44px;
+    justify-content: space-around;
+  }
+  .portfolio #title {
+    width: 100%;
+    font-size: 64px;
+    border-bottom: none;
+  }
+  .portfolio .portfolio-wrapper {
+    width: 100%;
+  }
+  .portfolio .portfolio-wrapper .repos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio .portfolio-wrapper .repos .card .card-title {
+    font-size: 30px;
+  }
+  .portfolio .portfolio-wrapper .repos .card .card-desc {
+    font-size: 14px;
+    line-height: 20px;
+    height: 140px;
+  }
+  .portfolio .portfolio-wrapper .repos .card .card-links a {
+    font-size: 16px;
+  }
+  .inter3 .inter3-wrapper .left span,
+  .inter3 .inter3-wrapper .right span,
+  .inter3 .inter3-wrapper .right a {
+    font-size: 34px;
+  }
+  .inter3 .inter3-wrapper .right {
+    text-align: center;
+  }
+  .contact .contact-wrapper {
+    width: 65%;
+    background-color: transparent;
+  }
+  .contact .contact-wrapper .contact-form,
+  .contact .contact-wrapper .contact-form form {
+    width: 100%;
+  }
+  .contact .contact-wrapper .contact-form form {
+    position: relative;
+  }
+  .contact .contact-wrapper .contact-form form button {
+    border: 1px solid white;
+    font-size: 24px;
+    position: relative;
+    width: 40%;
+    left: 0%;
+  }
 }
 /* tablet ends */
 
