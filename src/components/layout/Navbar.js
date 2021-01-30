@@ -7,7 +7,6 @@ import '../../App.css';
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [bgColor, setBgColor] = useState('rgba(0,0,0,.1)');
-  const [navActive, setNavActive] = useState(false);
 
   useEffect(() => {
     let listener = null;
