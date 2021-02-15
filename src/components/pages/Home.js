@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import Typical from 'react-typical';
-import Spinner from '../layout/Spinner';
+import { NavHashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 
 const Home = () => {
@@ -77,7 +77,11 @@ const Home = () => {
         </div>
         <div className='bottom'>
           {/* <button>Contact</button> */}
-          <Button>Contact</Button>
+          <Button>
+            <NavHashLink to='#contact' smooth>
+              Contact
+            </NavHashLink>
+          </Button>
         </div>
       </div>
     </div>

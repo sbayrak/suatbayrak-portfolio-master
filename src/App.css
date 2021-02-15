@@ -125,6 +125,17 @@ nav .navbar-wrapper .right ul li a.active2 {
   background-color: #191919;
   color: #fff;
 } */
+
+.welcomer .welcomer-wrapper .bottom button a {
+  text-decoration: none;
+
+  color: #000;
+  transition: 0.5s ease-in-out;
+}
+.welcomer .welcomer-wrapper .bottom button a:hover {
+  background-color: #191919;
+  color: #fff;
+}
 /* Index ends */
 
 /* Inter divler */
